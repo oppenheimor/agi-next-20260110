@@ -2,8 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: "/agi-next-meeting-20260110/",
+export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? "/agi-next-meeting-20260110/" : "/",
   plugins: [
     react({
       babel: {
@@ -11,4 +11,4 @@ export default defineConfig({
       },
     }),
   ],
-});
+}));
