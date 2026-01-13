@@ -1,0 +1,177 @@
+.concept-detail {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 面包屑 */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: var(--color-accent-primary);
+}
+
+.breadcrumb .separator {
+  color: var(--color-border);
+}
+
+/* 概念头部 */
+.concept-header {
+  text-align: center;
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.concept-category {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-secondary);
+  background: var(--color-accent-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.concept-name {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-accent-primary);
+}
+
+.concept-expert {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* 通用区块样式 */
+.concept-context-section,
+.concept-explanation-section,
+.concept-visualization-section,
+.related-concepts-section {
+  padding: var(--spacing-xl) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.concept-context-section h2,
+.concept-explanation-section h2,
+.concept-visualization-section h2,
+.related-concepts-section h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* 语境 */
+.context-quote {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-primary);
+  padding: var(--spacing-xl);
+  background: var(--color-accent-light);
+  border-left: 3px solid var(--color-accent-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 0;
+  font-style: italic;
+}
+
+/* 解释 */
+.explanation-content {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-primary);
+}
+
+/* 可视化 */
+.concept-visualization-section {
+  background: var(--color-paper-dark);
+  margin: 0 calc(-1 * var(--spacing-lg));
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+}
+
+/* 相关概念 */
+.related-concepts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.related-concept-card {
+  display: block;
+  padding: var(--spacing-md);
+  background: var(--color-paper-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.related-concept-card:hover {
+  border-color: var(--color-accent-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.related-concept-card h3 {
+  font-size: var(--text-base);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-accent-primary);
+}
+
+.related-concept-card p {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* 操作按钮 */
+.concept-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  padding: var(--spacing-xl) 0 var(--spacing-2xl);
+  flex-wrap: wrap;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .concept-name {
+    font-size: var(--text-3xl);
+  }
+
+  .context-quote,
+  .explanation-content {
+    font-size: var(--text-base);
+  }
+
+  .related-concepts-list {
+    grid-template-columns: 1fr;
+  }
+
+  .concept-actions {
+    flex-direction: column;
+  }
+
+  .concept-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .concept-visualization-section {
+    margin: 0 calc(-1 * var(--spacing-md));
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+}

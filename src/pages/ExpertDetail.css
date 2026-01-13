@@ -1,0 +1,150 @@
+.expert-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 面包屑 */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-lg);
+}
+
+.breadcrumb a {
+  color: var(--color-accent-primary);
+}
+
+.breadcrumb .separator {
+  color: var(--color-border);
+}
+
+/* 专家头部 */
+.expert-header {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.expert-name {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-accent-primary);
+}
+
+.expert-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0;
+}
+
+.expert-organization {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-accent-secondary);
+  margin: var(--spacing-xs) 0 var(--spacing-md);
+}
+
+.expert-bio {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.expert-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+/* 演讲内容 */
+.speech-content {
+  padding: var(--spacing-xl) 0;
+}
+
+.speech-title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.speech-summary {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: var(--spacing-xl);
+}
+
+.speech-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-accent-light);
+}
+
+.section-content p {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.section-highlights {
+  margin-top: var(--spacing-lg);
+}
+
+.highlight {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-accent-primary);
+  padding: var(--spacing-lg);
+  background: var(--color-accent-light);
+  border-left: 3px solid var(--color-accent-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 0;
+  font-style: italic;
+}
+
+/* 操作按钮 */
+.expert-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+  flex-wrap: wrap;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .expert-name {
+    font-size: var(--text-3xl);
+  }
+
+  .speech-title {
+    font-size: var(--text-2xl);
+  }
+
+  .section-title {
+    font-size: var(--text-xl);
+  }
+
+  .expert-actions {
+    flex-direction: column;
+  }
+
+  .expert-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
